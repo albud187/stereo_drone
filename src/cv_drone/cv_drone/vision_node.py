@@ -91,7 +91,7 @@ class VisionNode(Node):
         # camera intrinsics from left/camera_info
         # left and right cameras are the same
         # see https://github.com/albud187/sjtu-drone/blob/stereo-camera-sim/sjtu_drone_description/urdf/sjtu_drone_multi.urdf.xacro
-        # for camera prorties or execute ros2 topic echo <ns>/left/camera_info
+        # from camera properties or execute ros2 topic echo <ns>/left/camera_info
         self.fx = 701.614054597489
         self.fy = 701.614054597489
         self.cx = 480.5

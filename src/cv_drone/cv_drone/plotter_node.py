@@ -56,6 +56,7 @@ class PlotterNode(Node):
         self.scatter_plot = self.ax.scatter([], [], s=0.15, c= "red")
         self.cluster_center_plot = self.ax.scatter([], [], s=80, c="gray")
         self.cluster_texts = []
+        
         # Origin marker (drone position)
         self.origin_plot = self.ax.scatter([0], [0], c="blue", s=50)
 
@@ -65,6 +66,7 @@ class PlotterNode(Node):
         self.ax.set_aspect("equal")
         self.ax.grid(True)
 
+        # hardcode simulation - based on `self.max_depth_m = 100.0` in `vision_node.py` 
         self.ax.set_xlim(-50, 50)
         self.ax.set_ylim(-5, 100)
         self.left_fov_line,  = self.ax.plot([0, xL], [0, yL], linewidth=1, c="blue")
